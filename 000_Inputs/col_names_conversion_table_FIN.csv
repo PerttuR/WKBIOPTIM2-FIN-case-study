@@ -1,0 +1,13 @@
+CA_Standard;Own_names;Note
+trpCode;CruiseLocalID;
+staNum;HaulNumber;
+spp;CatchSpeciesCode;
+sex;BiologyIndividualSex;
+stock;BiologyStockCode;
+lenCls;Length;
+age;BiologyIndividualAge;
+fishId;BiologyFishID;
+lenCode;BiologyLengthCode;
+indWt;BiologyIndividualWeight;
+matScale;BiologyMaturityScale;
+matStage;BiologyIndividualMaturity;
