@@ -280,72 +280,72 @@ head(ls_DT_compiled[["20159001_21"]][["lenCls"]])
 		boxplot(MWCV~sim, data=DT2, main=paste("MWCV of the sample",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_mwcv)
 		abline(h=tail(DT2)$MWCV, col="blue", lty=2, lwd=2)
 		title(variable, outer=T, line=-1)
-		
-		windows(15,7); par(mfcol=c(2,2))
-		a<-	"113_999"
-		DT2<-ls_DT_compiled[[a]][[variable]]	
-		boxplot(cv~sim, data=DT2, main=paste("cv of the mean",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_cv)
-		boxplot(MWCV~sim, data=DT2, main=paste("MWCV of the sample",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_mwcv)
-		abline(h=tail(DT2)$MWCV, col="blue", lty=2, lwd=2)
-		a<-	"248_999"
-		DT2<-ls_DT_compiled[[a]][[variable]]	
-		boxplot(cv~sim, data=DT2, main=paste("cv of the mean",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_cv)
-		boxplot(MWCV~sim, data=DT2, main=paste("MWCV of the sample",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_mwcv)
-		abline(h=tail(DT2)$MWCV, col="blue", lty=2, lwd=2)		
-		title(variable, outer=T, line=-1)
-
-
-		variable = "lenCls"
-		a<-	"20159001_21"
-		boxplot(n_modes_smooth~sim, data=DT2, main=paste("n_modes_smooth",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_cv)
-		
-	
-	
-		mean(df0[df0$sampId=="88_999","age"])
-		median(df0[df0$sampId=="88_999","age"])
-		min(df0[df0$sampId=="88_999","age"])
-		max(df0[df0$sampId=="88_999","age"])
-	
-	str(ls_DT_compiled,1)
-	
-	
-	head(ls_DT_compiled[[2]])				
-	tail(ls_DT_compiled[[2]])				
-	head(ls_DT_compiled[[1]])				
-				
-				
-			DT2 <- ls_DT_compiled[["88_999"]][["age"]]	
-			DT2 <- ls_DT_compiled[["88_999"]][["lenCls"]]	
-			
-			# plot main outputs	(for one sample)
-			
-			# outputs one sample 1
-				windows(15,7); par(mfrow=c(2,2))
-					boxplot(mean~sim, data=DT2, main="mean of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					plot(mean~sim, data=DT2, main="mean of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					boxplot(cv~sim, data=DT2, main="cv of the mean", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					boxplot(ttest_prob~sim, data=DT2, main="ttest_prob", las=2, cex.axis=1.1, cex.main=1.5)
-					abline(h=0.05, col="red", lty=2, lwd=2)
-					#title(outer=TRUE, main=paste(DT2$sampId[1]), line=-1, cex.main=1.5)			
-			
-			
-				# outputs one sample 2
-				windows(15,7); par(mfrow=c(2,2))
-					boxplot(min~sim, data=DT2, main="minimum of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					boxplot(max~sim, data=DT2, main="maximum of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					boxplot(median~sim, data=DT2, main="median of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					boxplot(n_class_sampled~sim, data=DT2, main="No. length classes sampled", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					#title(outer=TRUE, main=paste("sample",DT2$sample_id[1]), line=-1)
-		
-			# outputs one sample 3		
-				windows(15,7); par(mfrow=c(2,2))					
-					#boxplot(n_modes~sim, data=DT2, main="Number of modes (original)", xlab = "sample size")
-					boxplot(n_modes_smooth~sim, data=DT2, main="Number of modes (smooth)", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					#boxplot(n_modes_correct~sim, data=DT2, main="Number of modes correct (original)", xlab = "sample size")
-					boxplot(ks_prob~sim, data=DT2, main="ks_prob", las=2, cex.axis=1.1, cex.main=1.5)
-					abline(h=0.05, col="red", lty=2, lwd=2)
-					boxplot(n_modes_correct_smooth~sim, data=DT2, main="Number of modes correct (smooth)", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					boxplot(MWCV~sim, data=DT2, main="MWCV of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
-					abline(h=tail(DT2)$MWCV, col="blue", lty=2, lwd=2)
-					#abline(h=20, col="red", lty=2, lwd=2)			
-			
+#		
+#		windows(15,7); par(mfcol=c(2,2))
+#		a<-	"113_999"
+#		DT2<-ls_DT_compiled[[a]][[variable]]	
+#		boxplot(cv~sim, data=DT2, main=paste("cv of the mean",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_cv)
+#		boxplot(MWCV~sim, data=DT2, main=paste("MWCV of the sample",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_mwcv)
+#		abline(h=tail(DT2)$MWCV, col="blue", lty=2, lwd=2)
+#		a<-	"248_999"
+#		DT2<-ls_DT_compiled[[a]][[variable]]	
+#		boxplot(cv~sim, data=DT2, main=paste("cv of the mean",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_cv)
+#		boxplot(MWCV~sim, data=DT2, main=paste("MWCV of the sample",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_mwcv)
+#		abline(h=tail(DT2)$MWCV, col="blue", lty=2, lwd=2)		
+#		title(variable, outer=T, line=-1)
+#
+#
+#		variable = "lenCls"
+#		a<-	"20159001_21"
+#		boxplot(n_modes_smooth~sim, data=DT2, main=paste("n_modes_smooth",a), xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5, ylim=ylimite_cv)
+#		
+#	
+#	
+#		mean(df0[df0$sampId=="88_999","age"])
+#		median(df0[df0$sampId=="88_999","age"])
+#		min(df0[df0$sampId=="88_999","age"])
+#		max(df0[df0$sampId=="88_999","age"])
+#	
+#	str(ls_DT_compiled,1)
+#	
+#	
+#	head(ls_DT_compiled[[2]])				
+#	tail(ls_DT_compiled[[2]])				
+#	head(ls_DT_compiled[[1]])				
+#				
+#				
+#			DT2 <- ls_DT_compiled[["88_999"]][["age"]]	
+#			DT2 <- ls_DT_compiled[["88_999"]][["lenCls"]]	
+#			
+#			# plot main outputs	(for one sample)
+#			
+#			# outputs one sample 1
+#				windows(15,7); par(mfrow=c(2,2))
+#					boxplot(mean~sim, data=DT2, main="mean of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					plot(mean~sim, data=DT2, main="mean of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					boxplot(cv~sim, data=DT2, main="cv of the mean", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					boxplot(ttest_prob~sim, data=DT2, main="ttest_prob", las=2, cex.axis=1.1, cex.main=1.5)
+#					abline(h=0.05, col="red", lty=2, lwd=2)
+#					#title(outer=TRUE, main=paste(DT2$sampId[1]), line=-1, cex.main=1.5)			
+#			
+#			
+#				# outputs one sample 2
+#				windows(15,7); par(mfrow=c(2,2))
+#					boxplot(min~sim, data=DT2, main="minimum of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					boxplot(max~sim, data=DT2, main="maximum of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					boxplot(median~sim, data=DT2, main="median of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					boxplot(n_class_sampled~sim, data=DT2, main="No. length classes sampled", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					#title(outer=TRUE, main=paste("sample",DT2$sample_id[1]), line=-1)
+#		
+#			# outputs one sample 3		
+#				windows(15,7); par(mfrow=c(2,2))					
+#					#boxplot(n_modes~sim, data=DT2, main="Number of modes (original)", xlab = "sample size")
+#					boxplot(n_modes_smooth~sim, data=DT2, main="Number of modes (smooth)", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					#boxplot(n_modes_correct~sim, data=DT2, main="Number of modes correct (original)", xlab = "sample size")
+#					boxplot(ks_prob~sim, data=DT2, main="ks_prob", las=2, cex.axis=1.1, cex.main=1.5)
+#					abline(h=0.05, col="red", lty=2, lwd=2)
+#					boxplot(n_modes_correct_smooth~sim, data=DT2, main="Number of modes correct (smooth)", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					boxplot(MWCV~sim, data=DT2, main="MWCV of the sample", xlab = "sample size", las=2, cex.axis=1.1, cex.main=1.5)
+#					abline(h=tail(DT2)$MWCV, col="blue", lty=2, lwd=2)
+#					#abline(h=20, col="red", lty=2, lwd=2)			
+#			
