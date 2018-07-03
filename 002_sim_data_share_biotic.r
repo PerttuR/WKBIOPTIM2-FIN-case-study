@@ -101,11 +101,11 @@
 			}
 	
 	str(ls_auto_modes,3)	
-	ls_auto_modes[["2001_999"]]$lenCls
-	ls_auto_modes[["2001_999"]]$matStage
-	ls_auto_modes[["2001_999"]]$age
-	ls_auto_modes[["2001_999"]]$sex
-	ls_auto_modes[["2001_999"]]$mature
+	ls_auto_modes[["20159001_21"]]$lenCls
+#	ls_auto_modes[["20159001_21"]]$matStage
+#	ls_auto_modes[["20159001_21"]]$age
+#	ls_auto_modes[["20159001_21"]]$sex
+#	ls_auto_modes[["20159001_21"]]$mature
 	
 
 	
@@ -126,18 +126,20 @@
 		# if your data was stratified with regards to one of the variables you have to take that into account
 			# you can mantain the stratification and look into the consequences of a reduction or increase in the number of individuals samples per strata
 			# you can attemp to de-stratify, creating a pseudo random sample and then test scenarios in it
-
-	source("sample_level_funs1.R")			
-														# check			
+																	
 
 	
 	# creates a storage object
 	ls_DT_compiled<-sapply(samples_to_analyze, function(x) NULL)
-
+  #check
+	str(ls_DT_compiled,3)	
+	
 	seed<-1
 	set.seed(seed)
 	ptc1<-Sys.time()	
-for(sampId in samples_to_analyze)
+
+	#for loop one sample at a time
+	for(sampId in samples_to_analyze)
 	{
 
 	print("==========================")
@@ -159,9 +161,9 @@ for(sampId in samples_to_analyze)
 			# sampling_options = list (n_sims = 100, stratified = FALSE, replacement=FALSE, sample_all_available = TRUE, sample_all_available_warning = TRUE, stages="one", samp_sizes = c(1:5*tmp.n_classes), strata_var = "none", vars_to_keep = c("Length_class", "Weight", "Age", "Sex", "Maturity_stage", "Mature"))
 	
 		sampling_options <- list (n_sims = 50, 
-							stages="one", 																						# no of stages
-								stratified = FALSE, strata_var = "", 															# stratification details
-									stage1_samp_size=NA, samp_sizes = c(seq(30,300, by=30), nrow(df1)), 													# samp sizes
+							stages="one", 											# no of stages
+								stratified = FALSE, strata_var = "", 									# stratification details
+									stage1_samp_size=NA, samp_sizes = c(seq(30,300, by=30), nrow(df1)), # samp sizes
 										replacement=FALSE, 	sample_all_available = TRUE, sample_all_available_warning = TRUE, 	# replacement options
 											vars_to_keep = c(""))		
 	
